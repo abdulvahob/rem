@@ -1,0 +1,107 @@
+nav {
+  width: 100%;
+  padding: 64px 0 70px;
+  background-color: $white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      a {
+        display: block;
+        img {
+          height: 24px;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      li {
+        margin-left: 42px;
+        &:first-child {
+          margin-left: 0;
+        }
+
+        a {
+          font-family: Jost;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 14px;
+          letter-spacing: 2px;
+          text-align: left;
+          color: $darkGrey;
+        }
+      }
+    }
+
+    .menu-group {
+      display: none;
+
+      img {
+        width: 24px;
+        height: 20px;
+      }
+    }
+  }
+}
+@media (min-width: 300px) and (max-width: 768px) {
+  nav {
+    padding: 35px 0 34px 0;
+    padding: 34px 0;
+    position: relative;
+    background-color: $white;
+    .container {
+      width: 100%;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      .menu-group {
+        display: block;
+        cursor: pointer;
+      }
+      ul {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: 0px;
+        top: 96px;
+        background-color: $black;
+        display: flex;
+        flex-direction: column;
+        padding: 48px 24px;
+        
+        li {
+          display: block;
+          margin: 6px 0;
+          a {
+              text-align: left;
+              padding: 6px 0;
+            color: $white;
+            width: 100%;
+            display: block;
+            font-family: Jost;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            letter-spacing: 2px;
+            text-align: left;
+            &:hover{
+                color: $lightPeach;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .active{
+    transform: translateY(-100%);
+    z-index: -1;
+}
+}
+
